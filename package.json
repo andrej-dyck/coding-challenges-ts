@@ -1,0 +1,33 @@
+{
+  "name": "ad-coding-challenges",
+  "version": "rc-1.0.0",
+  "description": "",
+  "author": "Andrej Dyck",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "main": "index.ts",
+  "sideEffects": false,
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json --composite false",
+    "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --max-warnings 0",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "check": "pnpm run typecheck && pnpm run lint && pnpm run test"
+  },
+  "packageManager": "pnpm@8.15.0",
+  "engine-strict": true,
+  "engines": {
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm",
+    "pnpm": ">=8.15.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.24",
+    "@typescript-eslint/eslint-plugin": "7.1.0",
+    "@typescript-eslint/parser": "7.1.0",
+    "eslint": "8.57.0",
+    "typescript": "5.3.3",
+    "vitest": "1.3.1"
+  }
+}
